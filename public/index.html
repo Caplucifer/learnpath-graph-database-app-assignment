@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LearnPath — Course Prerequisite Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">◈</span>
+        <div class="brand-text">
+          <h1>LearnPath</h1>
+          <p>A graph of what unlocks what</p>
+        </div>
+      </div>
+      <div class="search-wrap">
+        <input id="search" type="text" placeholder="Search courses…" autocomplete="off" />
+        <div id="search-results" class="search-results hidden"></div>
+      </div>
+      <div id="conn-status" class="conn-status">checking connection…</div>
+    </header>
+
+    <div class="layout">
+      <nav id="course-list" class="course-list" aria-label="All courses">
+        <div class="list-loading">Loading catalogue…</div>
+      </nav>
+
+      <main id="main-panel" class="main-panel">
+        <div class="empty-state">
+          <span class="empty-mark">◈</span>
+          <h2>Pick a course to begin</h2>
+          <p>Select any course on the left to see its full prerequisite chain and what it unlocks — every hop, not just the direct ones.</p>
+        </div>
+      </main>
+
+      <aside class="path-panel">
+        <h3>Find a path between two courses</h3>
+        <p class="hint">Follows prerequisite links in either direction to find the shortest route.</p>
+        <label>From
+          <select id="path-from"><option value="">Select a course…</option></select>
+        </label>
+        <label>To
+          <select id="path-to"><option value="">Select a course…</option></select>
+        </label>
+        <button id="path-go">Find shortest path</button>
+        <div id="path-result" class="path-result"></div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
