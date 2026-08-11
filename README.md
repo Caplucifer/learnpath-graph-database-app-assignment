@@ -173,10 +173,17 @@ Express process serving both the API and the static frontend. Set the same
 three `COGNODB_*` environment variables (plus `PORT` if required by the
 host) in the platform's dashboard; nothing else changes.
 
-**Demo link:** _add your hosted URL here_
-**Screen recording:** _add your recording link here_
+**Demo link:** https://learnpath-graph-database-app-assignment.onrender.com
+**Screen recording:** https://drive.google.com/file/d/1FB48aDWiV-tUy3fyJ5o2abfFuuFGOur8/view?usp=sharing
 
 ## 10. Screenshots
 
-_Add screenshots of the course list, a course detail view showing the
-prerequisite chain, and the path finder here before submitting._
+**Course list**
+![Course list](screenshots/course-list.png)
+
+**Course detail — prerequisite chain**
+![Course detail](screenshots/course-detail.png)
+
+**Path finder**
+![Path finder](screenshots/path-finder.png)
+
